@@ -21,7 +21,7 @@ tmux_get() {
 }
 
 # $1: option
-# $2: value
+#$2: value
 tmux_set() {
     tmux set-option -gq "$1" "$2"
 }
@@ -31,10 +31,10 @@ rarrow=''
 larrow=''
 upload_speed_icon='󰕒'
 download_speed_icon='󰇚'
-session_icon='''
+session_icon=''
 user_icon=''
 time_icon=''
-date_icon='''
+date_icon=''
 show_upload_speed=false
 show_download_speed=false
 show_web_reachable=false
