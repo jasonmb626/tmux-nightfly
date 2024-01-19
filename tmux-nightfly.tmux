@@ -34,7 +34,7 @@ user_icon=''
 window_icon=''
 prefix_highlight_pos=''
 session_list="#(tmux list-sessions | sed 's/(attached)/*/' | sed -E 's/([[:alnum:]]+): ([[:digit:]]+) windows \(.*\) *(\*)*/(\1\3: #\2)/' | tr '\n' ' ' | sed 's/ //g')"
-window_list="#(tmux list-windows | sed 's/\x28//' | cut -d' ' -f 2-3 | sed -E 's/(.*) ([[:digit:]]*)/(\1:󰖮\2)/' | tr '\n' ' ' | sed 's/ //g')"
+window_list="#(tmux list-windows | sed 's/\d40//' | cut -d' ' -f 2-3,8 | sed -E 's/(.*) ([[:digit:]]*) (.*)/(\3|\1|󰖮\2)/' | tr '\n' ' ' | sed 's/ //g' | sed 's/|/ /g')"
 # short for Theme-Colour
 TC='#82AAFF'
 TC2='#21C7A8'
